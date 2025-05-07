@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>TWN ESPORTS - Free Fire Tournament<style>
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@400;600&display=swap');
+
+  /* Reset and base */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px;
+  }
+  #container {
+    width: 100%;
+    max-width: 600px;
+    background: #121212dd;
+    border-radius: 15px;
+    overflow: hidden;
+    backdrop-filter: saturate(180%) blur(15px);
+    box-shadow: 0 0 20px #0ff;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 600px;
+  }
+  header {
+    background: linear-gradient(90deg, #d4145a 0%, #fbb03b 100%);
+    padding: 20px 15px;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    font-size: 2.8rem;
+    letter-spacing: 0.1em;
+    text-shadow: 1px 1px 5px #a5002e;
+  }
+  main {
+    padding: 15px 30px;
+    flex-grow: 1;
+    overflow-y: auto;
+  }
+  section {
+    margin-bottom: 25px;
+  }
+  h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    color: #fbb03b;
+    margin-bottom: 16px;
+    font-size: 2rem;
+    border-bottom: 3px solid #fbb03b;
+    padding-bottom: 8px;
+  }
+  p, li, label {
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+  ul {
+    padding-left: 24px;
+    margin-bottom: 15px;
+  }
+  li {
+    margin-bottom: 9px;
+  }
+  /* Tournament info */
+  #tournament-info {
+    background: #203a43;
+    border-radius: 12px;
+    padding: 15px 20px;
+    box-shadow: inset 0 0 15px #fbb03b;
+  }
+  /* Registration form */
+  form {
+    background: #203a43;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: inset 0 0 15px #d4145a;
+  }
+  input, select {
+    width: 100%;
+    padding: 14px 16px;
+    margin-bottom: 18px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    outline: none;
+  }
+  input[type="submit"] {
+    background: #d4145a;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    border-radius: 30px;
+    box-shadow: 0 0 15px #d4145a;
+  }
+  input[type="submit"]:hover {
+    background: #fbb03b;
+    color: #121212;
+    box-shadow: 0 0 20px #fbb03b;
+  }
+  /* Schedule */
+  #schedule ul {
+    list-style-type: none;
+  }
+  #schedule ul li {
+    background: rgba(255 255 255 / 0.1);
+    margin-bottom: 14px;
+    padding: 14px 18px;
+    border-radius: 14px;
+  }
+  /* Contact */
+  #contact p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  #contact a {
+    color: #fbb03b;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  #contact a:hover {
+    text-decoration: underline;
+  }
+  /* Footer */
+  footer {
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 12px 10px;
+    background: #121212cc;
+    color: #777;
+  }
+  /* Scrollbar style */
+  main::-webkit-scrollbar {
+    width: 10px;
+  }
+  main::-webkit-scrollbar-thumb {
+    background-color: #d4145a;
+    border-radius: 20px;
+  }
+  main::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  /* Responsive improvements */
+  @media (max-width: 360px) {
+    #container {
+      border-radius: 0;
+      min-height: 100vh;
+      margin: 0;
+    }
+    header {
+      font-size: 2.2rem;
+      padding: 18px;
+    }
+    main {
+      padding: 12px 18px;
+    }
+    h2 {
+      font-size: 1.6rem;
+      margin-bottom: 14px;
+      border-bottom-width: 2px;
+      padding-bottom: 6px;
+    }
+    input, select {
+      padding: 12px 14px;
+      font-size: 1rem;
+      margin-bottom: 14px;
+    }
+    input[type="submit"] {
+      font-size: 1.1rem;
+      padding: 14px 0;
+    }
+  }
+<div id="container" role="main" aria-label="TWN ESPORTS Free Fire Tournament website">
+   <header>
+      TWN ESPORTS
+   </header>
+   <main>
+     <section id="tournament-info">
+       <h2>Free Fire Tournament</h2>
+       <p>Welcome to the ultimate<strong>Free Fire</strong> battle at TWN ESPORTS! Join players from around the world to fight for glory and amazing prizes</p>
+       <ul>
+         <strong>Entry Fee</strong> 50₹</li>
+         <strong>Date</strong> August 20 - August 25, 2024</li>
+         <strong>Prize Pool</strong> 300₹ + exclusive in-game skins</li>
+         <strong>Platform</strong> Mobile</li>
+         <strong>Format</strong> Solo and Duo Battle Royale</li>
+       </ul>
+     </section>
+
+     <section id="registration">
+       <h2>Register Now</h2>
+       <form id="reg-form" aria-label="Registration form">
+         <label for="username">Game Username</label>
+         <input type="text" id="username" name="username" placeholder="Enter your Free Fire Nickname" required autocomplete="off" />
+         <label for="mode">Game Mode</label>
+         <select id="mode" name="mode" required>
+           <option value="">Select mode</option>
+           <option value="solo">Solo</option>
+           <option value="duo">Duo</option>
+         </select>
+         <input type="submit" value="Join Tournament" aria-label="Join Tournament" />
+       </form>
+       <p id="reg-message" aria-live="polite" style="margin-top:10px</p>
+     </section>
+
+     <section id="schedule">
+       <h2>Schedule</h2>
+       <ul>
+         <strong>Aug 20</strong> Registration opens</li>
+         <strong>Aug 23</strong> Registration closes</li>
+         <strong>Aug 24</strong> Qualifiers</li>
+         <strong>Aug 25</strong> Grand Finals &amp; Awards</li>
+       </ul>
+     </section>
+
+     <section id="contact">
+       <h2>Contact &amp; Support</h2>
+       <p>Questions? Reach out to us via</p>
+       <a href="mailto:support@twnesports.com">support@twnesports.com</p>
+       <p>Discord:<a href="https://discord.gg/twnesports" target="_blank" rel="noopener noreferrer">discord.gg/twnesports</p>
+       <p>Instagram:<a href="https://instagram.com/twnesports" target="_blank" rel="noopener noreferrer">@TWNESPORTS</p>
+     </section>
+   </main>
+   <footer>
+      &copy; 2024 TWN ESPORTS. All rights reserved.
+   </footer>
+ <script>
+  // Registration form handling (simulate success)
+  document.getElementById('reg-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const username = this.username.value.trim();
+    const mode = this.mode.value;
+    const messageEl = document.getElementById('reg-message');
+
+    if(username.length< 3) {
+      messageEl.textContent = 'Please enter a valid username (min 3 characters).';
+      messageEl.style.color = '#e74c3c';
+      return;
+    }
+    if(!mode) {
+      messageEl.textContent = 'Please select a game mode.';
+      messageEl.style.color = '#e74c3c';
+      return;
+    }
+    // Simulate async registration success
+    messageEl.textContent = 'Registering...';
+    messageEl.style.color = '#fbb03b';
+
+    setTimeout(() => {
+      messageEl.textContent = `Success! ${username} registered for ${mode} mode. Good luck!`;
+      messageEl.style.color = '#16a085';
+      this.reset();
+    }, 1200);
+  });
+</script>
+
